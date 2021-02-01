@@ -22,9 +22,11 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 
 		for (String string : a) {
-			for (String string2 : b) {
-				if (string.equalsIgnoreCase(string2)) {
+			int flag = 0;
+			for (String string2 : b) {			
+				if (string.equalsIgnoreCase(string2) && flag == 0) {
 					sb.append(string + " ");
+					flag = 1;				
 				}
 			}
 		}
