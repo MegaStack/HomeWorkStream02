@@ -13,10 +13,13 @@ public class MyFileLoader {
 			String text = "";
 			for (; (text = br.readLine()) != null;) {
 				sb.append(text);
-				sb.append(System.lineSeparator());
 			}
-			String allText = sb.toString().replaceAll("[,.()]", "");
+			String allText = sb.toString();
 			String[] arrayAllText = allText.split("[ ]");
+			for (String string : arrayAllText) {
+				System.out.print(string + " ");
+			}
+			System.out.println();
 			return arrayAllText;
 		} catch (IOException e) {
 			e.printStackTrace();
