@@ -12,9 +12,9 @@ public class MyFileLoader {
 			StringBuilder sb = new StringBuilder();
 			String text = "";
 			for (; (text = br.readLine()) != null;) {
-				sb.append(text);
+				sb.append(text + " ");
 			}
-			String allText = sb.toString();
+			String allText = sb.toString().replaceAll("[,.()]", "");
 			String[] arrayAllText = allText.split("[ ]");
 			for (String string : arrayAllText) {
 				System.out.print(string + " ");
