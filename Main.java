@@ -20,15 +20,17 @@ public class Main {
 
 	public static String compareMyWords(String[] a, String[] b) {
 		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < b.length; j++) {
-				if (a[i].equalsIgnoreCase(b[j])) {
-					sb.append(a[i]);
-					sb.append(", ");
+
+		for (String string : a) {
+			for (String string2 : b) {
+				if (string.equalsIgnoreCase(string2)) {
+					sb.append(string + " ");
 				}
 			}
 		}
+
 		return sb.toString();
+
 	}
 
 	public static void creatFile(String text) {
